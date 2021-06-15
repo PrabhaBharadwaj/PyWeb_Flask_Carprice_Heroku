@@ -64,7 +64,8 @@ def predict():
 
 # Here we are passing our function "predict" inside webio_view as webio_view(predict), so this will execute entire execution
 # Here defining rule and tells which all methods it supports like 'GET','POST','OPTIONS'
-        
+# Because of below command in app.py, if we refresh our api link in web it refreshes withot any error.
+
 app.add_url_rule('/tool', 'webio_view', webio_view(predict),
             methods=['GET', 'POST', 'OPTIONS'])
 
